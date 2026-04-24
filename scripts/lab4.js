@@ -28,13 +28,15 @@ function discountPrices(prices, discount) {
     const discounted = [];
     const length = prices.length;
     let discountedPrice = 0;
+
+    if(length === 0) return false;
     for(let i = 0; i < length; i++) {
         discountedPrice = prices[i] * (1 - discount);
         const finalPrice = Math.round(discountedPrice * 100) / 100;
         discounted.push(finalPrice);
     }
     
-    if(discounted.length == 0) return false;
+    
     return discounted;
 }
 
