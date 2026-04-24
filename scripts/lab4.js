@@ -33,7 +33,8 @@ function discountPrices(prices, discount) {
         const finalPrice = Math.round(discountedPrice * 100) / 100;
         discounted.push(finalPrice);
     }
-
+    
+    if(discounted.length == 0) return false;
     return discounted;
 }
 
