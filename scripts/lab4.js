@@ -30,7 +30,8 @@ function discountPrices(prices, discount) {
     let discountedPrice = 0;
     for(let i = 0; i < length; i++) {
         discountedPrice = prices[i] * (1 - discount);
-        discounted.push(discountedPrice);
+        const finalPrice = Math.round(discountedPrice * 100) / 100;
+        discounted.push(finalPrice);
     }
 
     return discounted;
